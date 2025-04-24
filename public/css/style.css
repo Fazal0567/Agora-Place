@@ -1,0 +1,69 @@
+.footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 40px 60px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #444;
+    padding-bottom: 30px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 15px;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+  }
+  
+  .footer-section address {
+    font-style: normal;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: #ccc;
+    font-size: 18px;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .footer-links a {
+    margin-right: 20px;
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  .payment-logos img {
+    height: 24px;
+    margin: 0 6px;
+  }
+  
