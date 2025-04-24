@@ -25,6 +25,48 @@ app.get("/", (req, res) => {
       price: 899,
       image: "/images/galaxy-s23.jpg"
     },
+    {
+      id: "",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
+    {
+      id: "4",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
+    {
+      id: "5",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
+    {
+      id: "6",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
+    {
+      id: "7",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
+    {
+      id: "8",
+      name: "Samsung Galaxy S23",
+      description: "High-end Android phone",
+      price: 899,
+      image: "/images/galaxy-s23.jpg"
+    },
   ];
 
   res.render("pages/home", { products });

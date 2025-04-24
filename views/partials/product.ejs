@@ -1,19 +1,27 @@
 <div class="container py-5">
     <!-- First Row -->
     <div class="row g-4 mb-4">
-        <% products.slice(0, 4).forEach(product => { %>
+        <% for(let i = 0; i < products.length; i++) { %>
+            <% if(i % 4 === 0 && i !== 0) { %>
+                </div>
+                <div class="row g-4 mb-4">
+            <% } %>
             <div class="col-sm-6 col-lg-3">
                 <div class="card h-100 shadow-sm hover-lift">
-                    <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>"
-                        style="height: 200px; object-fit: cover;">
+                    <div class="card-img-wrapper">
+                        <img src="<%= products[i].image %>" class="card-img-top" alt="<%= products[i].name %>"
+                            style="height: 200px; object-fit: cover;">
+                    </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-truncate"><%= product.name %></h5>
-                        <p class="card-text text-muted mb-3 flex-grow-1"><%= product.description %></p>
+                        <h5 class="card-title text-truncate"><%= products[i].name %></h5>
+                        <p class="card-text text-muted mb-3 flex-grow-1"><%= products[i].description %></p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="h5 mb-0">$<%= product.price %></span>
+                            <span class="h5 mb-0">$<%= products[i].price %></span>
                             <div class="btn-group">
-                                <button class="btn btn-primary btn-sm" onclick="buyNow('<%= product.id %>')">Buy Now</button>
-                                <button class="btn btn-outline-primary btn-sm" onclick="addToCart('<%= product.id %>')">
+                                <button class="btn btn-primary btn-sm" onclick="buyNow('<%= products[i].id %>')">
+                                    Buy Now
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm" onclick="addToCart('<%= products[i].id %>')">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -21,31 +29,6 @@
                     </div>
                 </div>
             </div>
-        <% }); %>
-    </div>
-
-    <!-- Second Row -->
-    <div class="row g-4">
-        <% products.slice(4, 8).forEach(product => { %>
-            <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm hover-lift">
-                    <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>"
-                        style="height: 200px; object-fit: cover;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-truncate"><%= product.name %></h5>
-                        <p class="card-text text-muted mb-3 flex-grow-1"><%= product.description %></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="h5 mb-0">$<%= product.price %></span>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm" onclick="buyNow('<%= product.id %>')">Buy Now</button>
-                                <button class="btn btn-outline-primary btn-sm" onclick="addToCart('<%= product.id %>')">
-                                    <i class="fas fa-cart-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <% }); %>
+        <% } %>
     </div>
 </div>
