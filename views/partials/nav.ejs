@@ -38,9 +38,17 @@
                 </ul>
 
                 <!-- Search Form -->
-                <form class="d-flex mx-lg-2 my-2 my-lg-0">
+                <form class="d-flex mx-lg-2 my-2 my-lg-0" action="/search" method="GET">
                     <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Search products...">
+                        <input 
+                            type="search" 
+                            name="q" 
+                            class="form-control" 
+                            placeholder="Search products..."
+                            minlength="2"
+                            required
+                            value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>"
+                        >
                         <button class="btn btn-outline-primary" type="submit">
                             <i class="fas fa-search"></i>
                         </button>

@@ -9,8 +9,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res) => {
-  const products = [
+app.get("/", async (req, res) => {
+  try {
+    // const searchQuery = req.query.q;
+    const products = [
     {
       id: "1",
       name: "iPhone 15",
@@ -67,9 +69,14 @@ app.get("/", (req, res) => {
       price: 899,
       image: "/images/galaxy-s23.jpg"
     },
-  ];
-
-  res.render("pages/home", { products });
+];
+  // if(!searchQuery){}
+    res.render("pages/home", { products });
+  }
+  catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 
