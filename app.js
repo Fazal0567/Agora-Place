@@ -20,6 +20,10 @@ app.get('/categories', (req, res) => {
   res.render('pages/category');
 }
 );
+app.get('/login', (req, res) => {
+  res.render('pages/login');
+}
+);
 
 app.get("/", async (req, res) => {
   try {
