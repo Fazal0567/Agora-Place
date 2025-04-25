@@ -8,6 +8,18 @@ app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
+// about page
+app.set('view engine', 'ejs');
+app.set('views','./views');
+
+// // categories 
+// app.set('view engine', 'ejs');
+// app.set('')]
+
+app.get('/categories', (req, res) => {
+  res.render('pages/category');
+}
+);
 
 app.get("/", async (req, res) => {
   try {
@@ -78,6 +90,11 @@ app.get("/", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
+app.get('/about',(req, res) => {
+  res.render('pages/about');
+}
+);
 
 
 app.listen(3000, () => {

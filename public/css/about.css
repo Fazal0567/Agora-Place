@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+main ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+main ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
